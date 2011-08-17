@@ -1,0 +1,33 @@
+# This is a Mercurial configuration file.
+[ui]
+username = Vincent Mi <vinc3m1@gmail.com>
+[extensions]
+bookmarks =
+mq =
+fetch =
+hggit=
+color=
+hgext.extdiff =
+graphlog =
+pager =
+
+[pager]
+pager = LESS='FSRX' less
+attend = annotate, cat, diff, export, glog, log, qdiff, lg
+
+[color]
+mode = auto
+
+[alias]
+log = glog --style ~/.hgstyles/colorcompact
+lg = log
+diff = diff -p
+book = bookmarks
+books = bookmarks
+
+[bookmarks]
+track.current = True
+
+[extdiff]
+cmd.ksdiff = /usr/local/bin/ksdiff-wrapper
+opts.ksdiff = hg
