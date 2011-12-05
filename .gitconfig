@@ -1,5 +1,5 @@
 [core]
-quotepath = false
+	quotepath = false
 
 [alias]
 st = status
@@ -20,5 +20,18 @@ status = auto
 editor = vim
 	autocrlf = input
 	safecrlf = true
+	excludesfile = /Users/vince/.gitignore_global
 [push]
 default = current
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[difftool "Kaleidoscope"]
+	cmd = ksdiff-wrapper git \"$LOCAL\" \"$REMOTE\"
+[difftool]
+	prompt = false
+[diff]
+	tool = Kaleidoscope
