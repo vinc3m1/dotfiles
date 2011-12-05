@@ -1,28 +1,27 @@
 [core]
 	quotepath = false
-
 [alias]
-st = status
-ci = commit
-co = checkout
-br = branch
-lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cblue- %an %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
-adr = add -A
+	st = status
+	ci = commit
+	co = checkout
+	br = branch
+	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cblue- %an %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
+	adr = add -A
 [user]
 	name = Vince Mi
-email = vinc3m1@gmail.com
+	email = vinc3m1@gmail.com
 [color]
-branch = auto
-diff = auto
-interactive = auto
-status = auto
+	branch = auto
+	diff = auto
+	interactive = auto
+	status = auto
 [core]
-editor = vim
+	editor = vim
 	autocrlf = input
 	safecrlf = true
 	excludesfile = /Users/vince/.gitignore_global
 [push]
-default = current
+	default = current
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 
