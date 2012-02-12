@@ -7,10 +7,16 @@
 	br = branch
 	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cblue- %an %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
 	lgs = log --stat --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cblue- %an %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
-	adr = add -A
-	diffw = diff -p --stat --color-words
-	diffch = diff -p --stat --color-words="."
+	lgss = log --shortstat --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cblue- %an %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
+	diffs = diff -p --stat
 	stat = diff --stat
+	diffm = diff -p --stat --diff-filter=M
+	diffw = diff --color-words -p --stat
+	diffc = diff --color-words='.' -p --stat
+	diffnw = diff -w -p --stat
+	
+	# Show files ignored by git:
+    	ign = ls-files -o -i --exclude-standard
 [user]
 	name = Vince Mi
 	email = vinc3m1@gmail.com
