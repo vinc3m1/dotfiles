@@ -5,9 +5,9 @@
 	ci = commit
 	co = checkout
 	br = branch
-	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cblue- %an %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
-	lgs = log --stat --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cblue- %an %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
-	lgss = log --shortstat --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cblue- %an %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
+	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cblue- %an %Cgreen(%cr)%Creset' --abbrev-commit --date=relative --date-order
+	lgs = log --stat --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cblue- %an %Cgreen(%cr)%Creset' --abbrev-commit --date=relative --date-order
+	lgss = log --shortstat --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cblue- %an %Cgreen(%cr)%Creset' --abbrev-commit --date=relative --date-order
 	diffs = diff -p --stat
 	stat = diff --stat
 	diffm = diff -p --stat --diff-filter=M
