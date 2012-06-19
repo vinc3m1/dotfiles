@@ -1,7 +1,7 @@
 [core]
 	quotepath = false
 [alias]
-	st = status
+	st = status -sb
 	ci = commit
 	co = checkout
 	br = branch
