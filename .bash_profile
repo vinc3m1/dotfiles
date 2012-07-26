@@ -8,7 +8,7 @@ export DYLD_LIBRARY_PATH=/usr/local/mysql/lib/
 export CLICOLOR=1
 export LSCOLORS=ExFxCxDxBxegedabagacad
 export HISTCONTROL=ignoreboth
-export WORKON_HOME=~/vitualenvs
+export WORKON_HOME=~/virtualenvs
 
 source /usr/local/bin/virtualenvwrapper.sh
 
