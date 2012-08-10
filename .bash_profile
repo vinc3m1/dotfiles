@@ -1,5 +1,5 @@
-export PATH=${PATH}:/Users/vince/Documents/android/android-sdk-mac_x86/tools/
-export PATH=${PATH}:/Users/vince/Documents/android/android-sdk-mac_x86/platform-tools/
+export PATH=${PATH}:/Users/vince/Documents/android-sdk-macosx/tools/
+export PATH=${PATH}:/Users/vince/Documents/android-sdk-macosx/platform-tools/
 export PATH=${PATH}:/Applications/kdiff3.app/Contents/MacOS
 export PATH=${PATH}:/Library/PostgreSQL/9.0/bin
 export PATH=${PATH}:/usr/local/mysql/bin
