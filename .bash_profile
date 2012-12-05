@@ -24,7 +24,3 @@ alias ...='cd .. ; cd ..'
 
 bind '"\e[A": history-search-backward'
 bind '"\e[B": history-search-forward'
-
-# MacPorts Installer addition on 2011-04-29_at_13:41:07: adding an appropriate PATH variable for use with MacPorts.
-export PATH=/opt/local/bin:/opt/local/sbin:$PATH
-# Finished adapting your PATH environment variable for use with MacPorts.
