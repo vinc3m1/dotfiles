@@ -1,20 +1,17 @@
-export PATH=${PATH}:/Users/vince/Documents/android-sdk-macosx/tools/
-export PATH=${PATH}:/Users/vince/Documents/android-sdk-macosx/platform-tools/
+export PATH=${PATH}:/Users/vince/Documents/android-sdk-macosx/tools
+export PATH=${PATH}:/Users/vince/Documents/android-sdk-macosx/platform-tools
 export PATH=${PATH}:/Applications/kdiff3.app/Contents/MacOS
-export PATH=${PATH}:/Library/PostgreSQL/9.0/bin
-export PATH=${PATH}:/usr/local/mysql/bin
-export PATH=${PATH}:/usr/local/sbin
-export DYLD_LIBRARY_PATH=/usr/local/mysql/lib/
+export PATH=/usr/local/bin:${PATH}
 export CLICOLOR=1
 export LSCOLORS=ExFxCxDxBxegedabagacad
 export HISTCONTROL=ignoreboth
 export WORKON_HOME=~/virtualenvs
+export ANDROID_SDK=/Users/vince/Documents/android-sdk-macosx
+export ANDROID_NDK=/Users/vince/Documents/android-ndk-r8d/
+export ANDROID_ABI=armeabi-v7a
 
 source /usr/local/bin/virtualenvwrapper.sh
 
-alias sc="script/console"
-alias sg="script/generate"
-alias ss="script/server"
 alias ll="ls -alF"
 alias la="ls -A"
 alias l="ls -CF"
