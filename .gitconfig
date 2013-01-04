@@ -27,8 +27,6 @@
 	status = auto
 [core]
 	editor = vim
-	autocrlf = input
-	safecrlf = true
 	excludesfile = /Users/vince/.gitignore_global
 [push]
 	default = current
