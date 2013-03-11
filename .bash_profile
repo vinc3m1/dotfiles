@@ -1,14 +1,19 @@
-export PATH=${PATH}:/Users/vince/Documents/android-sdk-macosx/tools
-export PATH=${PATH}:/Users/vince/Documents/android-sdk-macosx/platform-tools
+export ANDROID_HOME=/Users/vince/Documents/android-sdk-macosx
+export PATH=${PATH}:$ANDROID_HOME/tools
+export PATH=${PATH}:$ANDROID_HOME/platform-tools
 export PATH=${PATH}:/Applications/kdiff3.app/Contents/MacOS
-export PATH=/usr/local/bin:${PATH}
+export PATH=/usr/local/bin:/usr/local/share/npm/bin:${PATH}
 export CLICOLOR=1
 export LSCOLORS=ExFxCxDxBxegedabagacad
 export HISTCONTROL=ignoreboth
 export WORKON_HOME=~/virtualenvs
+export ANDROID_HOME=/Users/vince/Documents/android-sdk-macosx
 export ANDROID_SDK=/Users/vince/Documents/android-sdk-macosx
 export ANDROID_NDK=/Users/vince/Documents/android-ndk-r8d/
 export ANDROID_ABI=armeabi-v7a
+export JAVA_HOME=`/usr/libexec/java_home -v 1.6`
+export M2_HOME=/usr/share/maven
+export NODE_PATH=/usr/local/lib/node
 
 source /usr/local/bin/virtualenvwrapper.sh
 
