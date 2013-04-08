@@ -17,7 +17,12 @@
 	diffnw = diff -w -p --stat
 	
 	# Show files ignored by git:
-    	ign = ls-files -o -i --exclude-standard
+	ign = ls-files -o -i --exclude-standard
+
+	assume   = update-index --assume-unchanged
+	unassume = update-index --no-assume-unchanged
+	assumed  = "!git ls-files -v | grep ^h | cut -c 3-"
+
 [user]
 	name = Vince Mi
 [color]
