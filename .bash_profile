@@ -1,4 +1,4 @@
-export ANDROID_HOME=/Users/vince/Documents/android-sdk
+export ANDROID_HOME='/Applications/Android Studio.app/sdk'
 export PATH=${PATH}:$ANDROID_HOME/tools
 export PATH=${PATH}:$ANDROID_HOME/platform-tools
 export PATH=${PATH}:/Applications/kdiff3.app/Contents/MacOS
