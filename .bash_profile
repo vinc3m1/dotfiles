@@ -1,6 +1,7 @@
 export ANDROID_HOME='/Applications/Android Studio.app/sdk'
 export PATH=${PATH}:$ANDROID_HOME/tools
 export PATH=${PATH}:$ANDROID_HOME/platform-tools
+export PATH=${PATH}:$HOME/Documents/android-ndk
 export PATH=${PATH}:/Applications/kdiff3.app/Contents/MacOS
 export PATH=/usr/local/bin:/usr/local/share/npm/bin:${PATH}
 export CLICOLOR=1
