@@ -35,7 +35,7 @@
 [core]
 	editor = vim
 	excludesfile = /Users/vince/.gitignore_global
-	pager = less -F -X -i
+	pager = less -i
 [push]
 	default = current
 [difftool "sourcetree"]
