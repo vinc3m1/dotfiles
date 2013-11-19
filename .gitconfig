@@ -1,5 +1,9 @@
 [core]
 	quotepath = false
+	editor = vim
+	excludesfile = /Users/vince/.gitignore_global
+	pager = less -i
+	autocrlf = input
 [alias]
 	st = status -sb
 	ci = commit
@@ -32,10 +36,7 @@
 	diff = auto
 	interactive = auto
 	status = auto
-[core]
-	editor = vim
-	excludesfile = /Users/vince/.gitignore_global
-	pager = less -i
+
 [push]
 	default = current
 [difftool "sourcetree"]
