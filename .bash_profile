@@ -1,4 +1,5 @@
 export ANDROID_HOME='/Applications/Android Studio.app/sdk'
+export NDK_ROOT=$HOME/Documents/android-ndk
 export PATH=${PATH}:$ANDROID_HOME/tools
 export PATH=${PATH}:$ANDROID_HOME/platform-tools
 export PATH=${PATH}:$HOME/Documents/android-ndk
@@ -9,8 +10,11 @@ export LSCOLORS=ExFxCxDxBxegedabagacad
 export HISTCONTROL=ignoreboth
 export WORKON_HOME=~/.virtualenvs
 export ANDROID_ABI=armeabi-v7a
-export JAVA_HOME=`/usr/libexec/java_home -v 1.6`
-export M2_HOME=/usr/share/maven
+export JAVA6_HOME=`/usr/libexec/java_home -v 1.6`
+export JAVA7_HOME=`/usr/libexec/java_home -v 1.7`
+export JAVA8_HOME=`/usr/libexec/java_home -v 1.8`
+export JAVA_HOME=$JAVA8_HOME
+export M2_HOME=/usr/local/Cellar/maven/3.1.1/libexec
 export NODE_PATH=/usr/local/lib/node
 
 source /usr/local/bin/virtualenvwrapper.sh
