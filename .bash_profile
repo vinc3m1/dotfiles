@@ -4,6 +4,7 @@ export PATH=${PATH}:$ANDROID_HOME/tools
 export PATH=${PATH}:$ANDROID_HOME/platform-tools
 export PATH=${PATH}:$HOME/Documents/android-ndk
 export PATH=${PATH}:/Applications/kdiff3.app/Contents/MacOS
+export PATH=${PATH}:/Applications/Postgres.app/Contents/Versions/9.3/bin
 export PATH=/usr/local/bin:/usr/local/share/npm/bin:${PATH}
 export CLICOLOR=1
 export LSCOLORS=ExFxCxDxBxegedabagacad
@@ -13,7 +14,7 @@ export ANDROID_ABI=armeabi-v7a
 export JAVA6_HOME=`/usr/libexec/java_home -v 1.6`
 export JAVA7_HOME=`/usr/libexec/java_home -v 1.7`
 export JAVA8_HOME=`/usr/libexec/java_home -v 1.8`
-export JAVA_HOME=$JAVA8_HOME
+export JAVA_HOME=$JAVA7_HOME
 export M2_HOME=/usr/local/Cellar/maven/3.1.1/libexec
 export NODE_PATH=/usr/local/lib/node
 
