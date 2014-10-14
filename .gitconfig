@@ -28,7 +28,7 @@
 	unassume = update-index --no-assume-unchanged
 	assumed  = "!git ls-files -v | grep ^h | cut -c 3-"
 	up = "!git remote update -p; git merge --ff-only @{u}"
-	genignore = "!gi() { curl http://www.gitignore.io/api/$@ ;}; gi"
+	genignore = "!gi() { curl -sL http://www.gitignore.io/api/$@ ;}; gi"
 
 [user]
 	name = Vince Mi
@@ -55,3 +55,6 @@
 	tool = Kaleidoscope
 [merge]
 	defaultToUpstream = true
+[filter "media"]
+	clean = git-media-clean %f
+	smudge = git-media-smudge %f

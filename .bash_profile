@@ -11,10 +11,10 @@ export LSCOLORS=ExFxCxDxBxegedabagacad
 export HISTCONTROL=ignoreboth
 export WORKON_HOME=~/.virtualenvs
 export ANDROID_ABI=armeabi-v7a
-export JAVA6_HOME=`/usr/libexec/java_home -v 1.6`
-export JAVA7_HOME=`/usr/libexec/java_home -v 1.7`
-export JAVA8_HOME=`/usr/libexec/java_home -v 1.8`
-export JAVA_HOME=$JAVA7_HOME
+# export JAVA6_HOME=`/usr/libexec/java_home -v 1.6`
+# export JAVA7_HOME=`/usr/libexec/java_home -v 1.7`
+# export JAVA8_HOME=`/usr/libexec/java_home -v 1.8`
+# export JAVA_HOME=$JAVA7_HOME
 export M2_HOME=/usr/local/Cellar/maven/3.1.1/libexec
 export NODE_PATH=/usr/local/lib/node
 
