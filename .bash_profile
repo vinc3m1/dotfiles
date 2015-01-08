@@ -1,8 +1,8 @@
-export ANDROID_HOME='/Applications/Android Studio.app/sdk'
-export NDK_ROOT=$HOME/Documents/android-ndk
+export ANDROID_HOME='/usr/local/opt/android-sdk'
+export NDK_ROOT='/usr/local/android-ndk'
 export PATH=${PATH}:$ANDROID_HOME/tools
 export PATH=${PATH}:$ANDROID_HOME/platform-tools
-export PATH=${PATH}:$HOME/Documents/android-ndk
+export PATH=${PATH}:$NDK_ROOT
 export PATH=${PATH}:/Applications/kdiff3.app/Contents/MacOS
 export PATH=${PATH}:/Applications/Postgres.app/Contents/Versions/9.3/bin
 export PATH=/usr/local/bin:/usr/local/share/npm/bin:${PATH}
