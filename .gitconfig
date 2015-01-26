@@ -32,7 +32,7 @@
 
 [user]
 	name = Vince Mi
-	email = vinc3m1@gmail.com
+	email = q@uber.com
 [color]
 	branch = auto
 	diff = auto
@@ -58,3 +58,9 @@
 [filter "media"]
 	clean = git-media-clean %f
 	smudge = git-media-smudge %f
+[branch]
+	autosetuprebase = always
+[rerere]
+	enabled = true
+[url "ssh://git@github.com/"]
+	insteadOf = https://github.com/

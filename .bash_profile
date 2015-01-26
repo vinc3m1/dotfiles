@@ -23,6 +23,10 @@ export PATH=$PATH:$GOPATH/bin
 
 source /usr/local/bin/virtualenvwrapper.sh
 
+export EDITOR=vim
+export UBER_HOME="$HOME/Uber"
+export VAGRANT_DEFAULT_PROVIDER=aws
+
 alias ll="ls -alF"
 alias la="ls -A"
 alias l="ls -CF"
@@ -47,8 +51,16 @@ if [ -f ~/.git-completion.bash ]; then
     . ~/.git-completion.bash
 fi
 
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/vince/Downloads/google-cloud-sdk/path.bash.inc' ]; then source '/Users/vince/Downloads/google-cloud-sdk/path.bash.inc'; fi
+[ -s "/usr/local/bin/virtualenvwrapper.sh" ] && . /usr/local/bin/virtualenvwrapper.sh
+[ -s "$HOME/.nvm/nvm.sh" ] && . $HOME/.nvm/nvm.sh
+type "brew" &>/dev/null && [ -s "$(brew --prefix)/etc/bash_completion" ] && . $(brew --prefix)/etc/bash_completion
 
-# The next line enables shell command completion for gcloud.
-if [ -f '/Users/vince/Downloads/google-cloud-sdk/completion.bash.inc' ]; then source '/Users/vince/Downloads/google-cloud-sdk/completion.bash.inc'; fi
+cdsync () {
+    cd $(boxer sync_dir $@)
+}
+editsync () {
+    $EDITOR $(boxer sync_dir $@)
+}
+opensync () {
+    open $(boxer sync_dir $@)
+}
