@@ -1,6 +1,6 @@
-export ANDROID_HOME='/usr/local/opt/android-sdk'
-export NDK_ROOT='/usr/local/android-ndk'
-export PATH=${PATH}:$ANDROID_HOME/tools
+export ANDROID_HOME=$HOME/Library/Android/sdk
+export NDK_ROOT=$ANDROID_HOME/ndk-bundle
+export PATH=${PATH}:$ANDROID_HOME/tools/bin
 export PATH=${PATH}:$ANDROID_HOME/platform-tools
 export PATH=${PATH}:$NDK_ROOT
 export PATH=${PATH}:/Applications/kdiff3.app/Contents/MacOS
