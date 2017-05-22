@@ -30,7 +30,6 @@ export EDITOR=vim
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
 export PATH="$HOME/.rbenv/bin:$PATH"
-# export GIT_SSH=/usr/local/bin/ussh
 
 alias ll="ls -alF"
 alias la="ls -A"
