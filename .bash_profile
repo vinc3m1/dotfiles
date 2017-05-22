@@ -1,5 +1,6 @@
 export ANDROID_HOME=$HOME/Library/Android/sdk
 export NDK_ROOT=$ANDROID_HOME/ndk-bundle
+export ANDROID_NDK=$NDK_ROOT
 export PATH=${PATH}:$ANDROID_HOME/tools/bin
 export PATH=${PATH}:$ANDROID_HOME/platform-tools
 export PATH=${PATH}:$NDK_ROOT
@@ -15,7 +16,8 @@ export ANDROID_ABI=armeabi-v7a
 # export JAVA7_HOME=`/usr/libexec/java_home -v 1.7`
 # export JAVA8_HOME=`/usr/libexec/java_home -v 1.8`
 # export JAVA_HOME=$JAVA7_HOME
-export M2_HOME=/usr/local/Cellar/maven/3.1.1/libexec
+export M2_HOME=/usr/local/opt/maven/libexec
+export EDITOR=vim
 export NODE_PATH=/usr/local/lib/node
 export NVM_DIR="$HOME/.nvm"
 export GOPATH=$HOME/go
