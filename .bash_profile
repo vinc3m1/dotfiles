@@ -1,5 +1,8 @@
 export ANDROID_HOME=$HOME/Library/Android/sdk
 export NDK_ROOT=$ANDROID_HOME/ndk-bundle
+export ANDROID_HOME="$ANDROID_HOME/ndk-bundle"
+export ANDROID_NDK=$ANDROID_HOME
+export NDK_ROOT=/usr/local/opt/android-ndk
 export PATH=${PATH}:$ANDROID_HOME/tools/bin
 export PATH=${PATH}:$ANDROID_HOME/platform-tools
 export PATH=${PATH}:$NDK_ROOT
@@ -11,11 +14,11 @@ export LSCOLORS=ExFxCxDxBxegedabagacad
 export HISTCONTROL=ignoreboth
 export WORKON_HOME=~/.virtualenvs
 export ANDROID_ABI=armeabi-v7a
-# export JAVA6_HOME=`/usr/libexec/java_home -v 1.6`
-# export JAVA7_HOME=`/usr/libexec/java_home -v 1.7`
-# export JAVA8_HOME=`/usr/libexec/java_home -v 1.8`
-# export JAVA_HOME=$JAVA7_HOME
-export M2_HOME=/usr/local/Cellar/maven/3.1.1/libexec
+export JAVA6_HOME=`/usr/libexec/java_home -v 1.6`
+export JAVA7_HOME=`/usr/libexec/java_home -v 1.7`
+export JAVA8_HOME=`/usr/libexec/java_home -v 1.8`
+export JAVA_HOME=$JAVA8_HOME
+export M2_HOME=/usr/local/opt/maven/libexec
 export NODE_PATH=/usr/local/lib/node
 export NVM_DIR="$HOME/.nvm"
 export GOPATH=$HOME/go
@@ -24,8 +27,10 @@ export PATH=$PATH:$GOPATH/bin
 source /usr/local/bin/virtualenvwrapper.sh
 
 export EDITOR=vim
-export UBER_HOME="$HOME/Uber"
-export VAGRANT_DEFAULT_PROVIDER=aws
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOPATH/bin
+export PATH="$HOME/.rbenv/bin:$PATH"
+# export GIT_SSH=/usr/local/bin/ussh
 
 alias ll="ls -alF"
 alias la="ls -A"
@@ -35,6 +40,9 @@ alias ..='cd ..'
 alias ...='cd .. ; cd ..'
 alias gw='./gradlew'
 alias mp='./manage.py'
+alias bw='./buckw'
+
+eval $(thefuck --alias)
 
 bind '"\e[A": history-search-backward'
 bind '"\e[B": history-search-forward'
@@ -51,16 +59,32 @@ if [ -f ~/.git-completion.bash ]; then
     . ~/.git-completion.bash
 fi
 
+# added by newengsetup
+export UBER_HOME="$HOME/Uber"
+export UBER_OWNER="q@uber.com"
+export UBER_LDAP_UID="q"
+export VAGRANT_DEFAULT_PROVIDER=aws
 [ -s "/usr/local/bin/virtualenvwrapper.sh" ] && . /usr/local/bin/virtualenvwrapper.sh
 [ -s "$HOME/.nvm/nvm.sh" ] && . $HOME/.nvm/nvm.sh
 type "brew" &>/dev/null && [ -s "$(brew --prefix)/etc/bash_completion" ] && . $(brew --prefix)/etc/bash_completion
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
+_sync_dir () {
+    cmd=$1
+    shift
+    new_directory=$(boxer sync_dir $@)
+    if [ "$?" -eq "0" ]; then
+        $cmd $new_directory
+    else
+        echo "$new_directory"
+    fi
+}
 cdsync () {
-    cd $(boxer sync_dir $@)
+    _sync_dir cd $@
 }
 editsync () {
-    $EDITOR $(boxer sync_dir $@)
+    _sync_dir $EDITOR $@
 }
 opensync () {
-    open $(boxer sync_dir $@)
+    _sync_dir open @
 }
