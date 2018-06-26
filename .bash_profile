@@ -26,17 +26,14 @@ export PATH=$PATH:$GOPATH/bin
 
 source /usr/local/bin/virtualenvwrapper.sh
 
-alias ll="ls -alF"
-alias la="ls -A"
-alias l="ls -CF"
-alias p="pwd"
-alias ..='cd ..'
-alias ...='cd .. ; cd ..'
-alias gw='./gradlew'
-alias mp='./manage.py'
+# Alias definitions.
+# You may want to put all your additions into a separate file like
+# ~/.bash_aliases, instead of adding them here directly.
+# See /usr/share/doc/bash-doc/examples in the bash-doc package.
 
-bind '"\e[A": history-search-backward'
-bind '"\e[B": history-search-forward'
+if [ -f ~/.bash_aliases ]; then
+    . ~/.bash_aliases
+fi
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
@@ -44,10 +41,6 @@ bind '"\e[B": history-search-forward'
 
 if [ $ITERM_SESSION_ID ]; then
     export PROMPT_COMMAND='echo -ne "\033];${PWD##*/}\007"; ':"$PROMPT_COMMAND";
-fi
-
-if [ -f ~/.git-completion.bash ]; then
-    . ~/.git-completion.bash
 fi
 
 # The next line updates PATH for the Google Cloud SDK.
