@@ -40,7 +40,7 @@ fi
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvmj
 
 if [ $ITERM_SESSION_ID ]; then
-    export PROMPT_COMMAND='echo -ne "\033];${PWD##*/}\007"; ':"$PROMPT_COMMAND";
+    export PROMPT_COMMAND='echo -ne "\033];${PWD##*/}\007";';
 fi
 
 # The next line updates PATH for the Google Cloud SDK.
