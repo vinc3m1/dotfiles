@@ -67,7 +67,7 @@ if [ "$TERM" != "linux" ] && [ -f "$GOPATH/bin/powerline-go" ]; then
 fi
 
 # The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/vince/Downloads/google-cloud-sdk/path.bash.inc' ]; then source '/Users/vince/Downloads/google-cloud-sdk/path.bash.inc'; fi
+if [ -f '/Users/vince/google-cloud-sdk/path.bash.inc' ]; then . '/Users/vince/google-cloud-sdk/path.bash.inc'; fi
 
 # The next line enables shell command completion for gcloud.
-if [ -f '/Users/vince/Downloads/google-cloud-sdk/completion.bash.inc' ]; then source '/Users/vince/Downloads/google-cloud-sdk/completion.bash.inc'; fi
+if [ -f '/Users/vince/google-cloud-sdk/completion.bash.inc' ]; then . '/Users/vince/google-cloud-sdk/completion.bash.inc'; fi
