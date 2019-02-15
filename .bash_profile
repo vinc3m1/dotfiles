@@ -7,16 +7,16 @@ export EDITOR=vim
 # Android
 export ANDROID_HOME=$HOME/Library/Android/sdk
 export NDK_ROOT=$ANDROID_HOME/ndk-bundle
+export NDK_HOME=$NDK_ROOT
 export ANDROID_NDK=$NDK_ROOT
 export PATH=${PATH}:$ANDROID_HOME/tools
 export PATH=${PATH}:$ANDROID_HOME/tools/bin
 export PATH=${PATH}:$ANDROID_HOME/platform-tools
 export PATH=${PATH}:$NDK_ROOT
 export ANDROID_ABI=armeabi-v7a
-# export JAVA6_HOME=`/usr/libexec/java_home -v 1.6`
-# export JAVA7_HOME=`/usr/libexec/java_home -v 1.7`
-# export JAVA8_HOME=`/usr/libexec/java_home -v 1.8`
-# export JAVA_HOME=$JAVA7_HOME
+export JAVA8_HOME=`/usr/libexec/java_home -v 1.8`
+export JAVA9_HOME=`/usr/libexec/java_home -v 9`
+export JAVA_HOME=$JAVA8_HOME
 export M2_HOME=/usr/local/opt/maven/libexec
 
 # Postgres
