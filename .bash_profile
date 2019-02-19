@@ -6,7 +6,8 @@ export EDITOR=vim
 
 # Android
 export ANDROID_HOME=$HOME/Library/Android/sdk
-export NDK_ROOT=$ANDROID_HOME/ndk-bundle
+# export NDK_ROOT=$ANDROID_HOME/ndk-bundle
+export NDK_ROOT=$ANDROID_HOME/ndk-r15c
 export NDK_HOME=$NDK_ROOT
 export ANDROID_NDK=$NDK_ROOT
 export PATH=${PATH}:$ANDROID_HOME/tools
@@ -35,7 +36,7 @@ export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
 
 # python
-source /usr/local/bin/virtualenvwrapper.sh
+[[ -s "/usr/local/bin/virtualenvwrapper.sh" ]] && source /usr/local/bin/virtualenvwrapper.sh
 export WORKON_HOME=~/.virtualenvs
 
 # ruby
