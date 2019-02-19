@@ -6,8 +6,8 @@ export EDITOR=vim
 
 # Android
 export ANDROID_HOME=$HOME/Library/Android/sdk
-# export NDK_ROOT=$ANDROID_HOME/ndk-bundle
-export NDK_ROOT=$ANDROID_HOME/ndk-r15c
+export NDK_ROOT=$ANDROID_HOME/ndk-bundle
+# export NDK_ROOT=$ANDROID_HOME/ndk-r15c
 export NDK_HOME=$NDK_ROOT
 export ANDROID_NDK=$NDK_ROOT
 export PATH=${PATH}:$ANDROID_HOME/tools
@@ -27,9 +27,8 @@ export PATH=${PATH}:/Applications/Postgres.app/Contents/Versions/9.3/bin
 export PATH=/usr/local/bin:/usr/local/share/npm/bin:${PATH}
 export NODE_PATH=/usr/local/lib/node
 export NVM_DIR="$HOME/.nvm"
-[ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
-[ -s "/usr/local/opt/nvm/etc/bash_completion" ] && . "/usr/local/opt/nvm/etc/bash_completion"  # This loads nvm bash_completion
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # golang
 export GOPATH=$HOME/go
