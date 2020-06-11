@@ -59,7 +59,8 @@ fi
 
 # powerline-go
 function _update_ps1() {
-    PS1="$($GOPATH/bin/powerline-go -mode flat -error $?)"
+    # PS1="$($GOPATH/bin/powerline-go -mode flat -error $?)"
+    PS1="$($GOPATH/bin/powerline-go -modules venv,user,host,ssh,cwd,perms,jobs,exit,root -error $?)"
 }
 
 if [ "$TERM" != "linux" ] && [ -f "$GOPATH/bin/powerline-go" ]; then
@@ -71,3 +72,6 @@ if [ -f '/Users/vince/google-cloud-sdk/path.bash.inc' ]; then . '/Users/vince/go
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/vince/google-cloud-sdk/completion.bash.inc' ]; then . '/Users/vince/google-cloud-sdk/completion.bash.inc'; fi
+
+# hgd
+[[ -s "/etc/bash_completion.d/hgd" ]] && source /etc/bash_completion.d/hgd
