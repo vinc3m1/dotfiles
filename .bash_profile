@@ -70,9 +70,9 @@ fi
 
 # powerline-go
 function _update_ps1() {
-    # PS1="$($GOPATH/bin/powerline-go -error $?)"
+    PS1="$($GOPATH/bin/powerline-go -error $?)"
     # git and hg disabled for performance
-    PS1="$($GOPATH/bin/powerline-go -modules venv,user,host,ssh,cwd,perms,jobs,exit,root -error $?)"
+    # PS1="$($GOPATH/bin/powerline-go -modules venv,user,host,ssh,cwd,perms,jobs,exit,root -error $?)"
 }
 
 if [ "$TERM" != "linux" ] && [ -f "$GOPATH/bin/powerline-go" ]; then
@@ -80,10 +80,10 @@ if [ "$TERM" != "linux" ] && [ -f "$GOPATH/bin/powerline-go" ]; then
 fi
 
 # The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/vince/google-cloud-sdk/path.bash.inc' ]; then . '/Users/vince/google-cloud-sdk/path.bash.inc'; fi
+if [ -f "$HOME/google-cloud-sdk/path.bash.inc" ]; then . "$HOME/google-cloud-sdk/path.bash.inc"; fi
 
 # The next line enables shell command completion for gcloud.
-if [ -f '/Users/vince/google-cloud-sdk/completion.bash.inc' ]; then . '/Users/vince/google-cloud-sdk/completion.bash.inc'; fi
+if [ -f "$HOME/google-cloud-sdk/completion.bash.inc" ]; then . "$HOME/google-cloud-sdk/completion.bash.inc"; fi
 
 # hgd
-[[ -s "/etc/bash_completion.d/hgd" ]] && source /etc/bash_completion.d/hgd
+if [ -f "/etc/bash_completion.d/hgd" ]; then source '/etc/bash_completion.d/hgd'; fi
