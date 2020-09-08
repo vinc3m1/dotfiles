@@ -16,7 +16,7 @@ export PATH=${PATH}:$ANDROID_HOME/platform-tools
 export PATH=${PATH}:$NDK_ROOT
 export ANDROID_ABI=armeabi-v7a
 export JAVA8_HOME=`/usr/libexec/java_home -v 1.8`
-export JAVA9_HOME=`/usr/libexec/java_home -v 9`
+# export JAVA9_HOME=`/usr/libexec/java_home -v 9`
 export JAVA_HOME=$JAVA8_HOME
 export M2_HOME=/usr/local/opt/maven/libexec
 
@@ -40,9 +40,20 @@ export WORKON_HOME=~/.virtualenvs
 
 # ruby
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+export GEM_HOME=$HOME/.gem
+export PATH=$GEM_HOME/bin:$PATH
 
 # git
 source /usr/local/etc/bash_completion.d/git-completion.bash
+
+# dart
+export PATH="$PATH:$HOME/flutter/bin/cache/dart-sdk/bin"
+
+# flutter
+export PATH="$PATH:$HOME/flutter/bin"
+
+# local bin (for repo)
+export PATH="$PATH:$HOME/bin"
 
 # Alias definitions.
 # You may want to put all your additions into a separate file like
@@ -59,7 +70,8 @@ fi
 
 # powerline-go
 function _update_ps1() {
-    # PS1="$($GOPATH/bin/powerline-go -mode flat -error $?)"
+    # PS1="$($GOPATH/bin/powerline-go -error $?)"
+    # git and hg disabled for performance
     PS1="$($GOPATH/bin/powerline-go -modules venv,user,host,ssh,cwd,perms,jobs,exit,root -error $?)"
 }
 
