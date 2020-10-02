@@ -4,6 +4,9 @@ export LSCOLORS=ExFxCxDxBxegedabagacad
 export HISTCONTROL=ignoreboth
 export EDITOR=vim
 
+# macOS
+export BASH_SILENCE_DEPRECATION_WARNING=1
+
 # Android
 export ANDROID_HOME=$HOME/Library/Android/sdk
 export NDK_ROOT=$ANDROID_HOME/ndk-bundle
