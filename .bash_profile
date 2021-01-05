@@ -47,7 +47,7 @@ export GEM_HOME=$HOME/.gem
 export PATH=$GEM_HOME/bin:$PATH
 
 # git
-source /usr/local/etc/bash_completion.d/git-completion.bash
+[[ -s "$HOME/.git-completion.bash" ]] && source $HOME/.git-completion.bash
 
 # dart
 export PATH="$PATH:$HOME/flutter/bin/cache/dart-sdk/bin"
