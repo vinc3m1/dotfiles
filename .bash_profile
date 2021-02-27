@@ -7,6 +7,9 @@ export EDITOR=vim
 # macOS
 export BASH_SILENCE_DEPRECATION_WARNING=1
 
+# homebrew
+eval $(/opt/homebrew/bin/brew shellenv)
+
 # Android
 export ANDROID_HOME=$HOME/Library/Android/sdk
 export NDK_ROOT=$ANDROID_HOME/ndk-bundle
@@ -16,6 +19,7 @@ export ANDROID_NDK=$NDK_ROOT
 export PATH=${PATH}:$ANDROID_HOME/tools
 export PATH=${PATH}:$ANDROID_HOME/tools/bin
 export PATH=${PATH}:$ANDROID_HOME/platform-tools
+export PATH=${PATH}:$ANDROID_HOME/cmdline-tools/latest/bin
 export PATH=${PATH}:$NDK_ROOT
 export ANDROID_ABI=armeabi-v7a
 export JAVA8_HOME=`/usr/libexec/java_home -v 1.8`
