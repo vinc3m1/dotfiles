@@ -10,7 +10,6 @@ export BASH_SILENCE_DEPRECATION_WARNING=1
 # Android
 export ANDROID_HOME=$HOME/Library/Android/sdk
 export NDK_ROOT=$ANDROID_HOME/ndk-bundle
-# export NDK_ROOT=$ANDROID_HOME/ndk-r15c
 export NDK_HOME=$NDK_ROOT
 export ANDROID_NDK=$NDK_ROOT
 export PATH=${PATH}:$ANDROID_HOME/tools
@@ -20,8 +19,8 @@ export PATH=${PATH}:$ANDROID_HOME/cmdline-tools/latest/bin
 export PATH=${PATH}:$NDK_ROOT
 export ANDROID_ABI=armeabi-v7a
 export JAVA8_HOME=`/usr/libexec/java_home -v 1.8`
-# export JAVA9_HOME=`/usr/libexec/java_home -v 9`
-export JAVA_HOME=$JAVA8_HOME
+export JAVA11_HOME=`/usr/libexec/java_home -v 11`
+export JAVA_HOME=$JAVA11_HOME
 export M2_HOME=/usr/local/opt/maven/libexec
 
 # Postgres
@@ -59,6 +58,9 @@ export PATH="$PATH:$HOME/flutter/bin/cache/dart-sdk/bin"
 
 # flutter
 export PATH="$PATH:$HOME/flutter/bin"
+
+# bazel
+if [ -f "/usr/local/lib/bazel/bin/bazel-complete.bash" ]; then source /usr/local/lib/bazel/bin/bazel-complete.bash; fi
 
 # local bin (for repo)
 export PATH="$PATH:$HOME/bin"
