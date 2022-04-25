@@ -1,6 +1,6 @@
-alias ll="ls -alFh"
-alias la="ls -A"
-alias l="ls -CF"
+alias ll="ls -alFh --color=auto"
+alias la="ls -A --color=auto"
+alias l="ls -CF --color=auto"
 alias p="pwd"
 alias ..='cd ..'
 alias ...='cd .. ; cd ..'
