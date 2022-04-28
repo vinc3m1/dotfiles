@@ -1,12 +1,16 @@
-nnoremap <S-Left> :action EditorLeftWithSelection<CR>
-nnoremap <S-Right> :action EditorRightWithSelection<CR>
-nnoremap <S-Up> :action EditorUpWithSelection<CR>
-nnoremap <S-Down> :action EditorDownWithSelection<CR>
+nmap <S-Left> <Action>(EditorLeftWithSelection)
+nmap <S-Right> <Action>(EditorRightWithSelection)
+nmap <S-Up> <Action>(EditorUpWithSelection)
+nmap <S-Down> <Action>(EditorDownWithSelection)
+imap <S-Left> <Action>(EditorLeftWithSelection)
+imap <S-Right> <Action>(EditorRightWithSelection)
+imap <S-Up> <Action>(EditorUpWithSelection)
+imap <S-Down> <Action>(EditorDownWithSelection)
+vmap <S-Left> <Action>(EditorLeftWithSelection)
+vmap <S-Right> <Action>(EditorRightWithSelection)
+vmap <S-Up> <Action>(EditorUpWithSelection)
+vmap <S-Down> <Action>(EditorDownWithSelection)
 
-inoremap <S-Left> <C-O>:action EditorLeftWithSelection<CR>
-inoremap <S-Right> <C-O>:action EditorRightWithSelection<CR>
-inoremap <S-Up> <C-O>:action EditorUpWithSelection<CR>
-inoremap <S-Down> <C-O>:action EditorDownWithSelection<CR>
 set ideajoin
 set noerrorbells
 set visualbell
