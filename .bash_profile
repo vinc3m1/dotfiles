@@ -96,5 +96,5 @@ if [ -f "$HOME/google-cloud-sdk/path.bash.inc" ]; then . "$HOME/google-cloud-sdk
 # The next line enables shell command completion for gcloud.
 if [ -f "$HOME/google-cloud-sdk/completion.bash.inc" ]; then . "$HOME/google-cloud-sdk/completion.bash.inc"; fi
 
-# hgd
-if [ -f "/etc/bash_completion.d/hgd" ]; then source '/etc/bash_completion.d/hgd'; fi
+# WSL2 Keychain
+if command -v keychain e &> /dev/null; then eval `keychain --eval --agents ssh id_ed25519`; fi
