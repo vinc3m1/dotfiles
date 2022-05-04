@@ -13,6 +13,8 @@
 	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cblue- %an %Cgreen(%cr)%Creset' --date=relative --date-order
 	lgs = log --stat --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cblue- %an %Cgreen(%cr)%Creset' --abbrev-commit --date=relative --date-order
 	lgss = log --shortstat --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cblue- %an %Cgreen(%cr)%Creset' --abbrev-commit --date=relative --date-order
+	lgf = log --first-parent --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cblue- %an %Cgreen(%cr)%Creset' --date=relative --date-order
+	lgfs = log --first-parent --stat -m --graph  --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cblue- %an %Cgreen(%cr)%Creset' --date=relative --date-order
 	dif = diff --ignore-space-at-eol -b -w --ignore-blank-lines
 	diffs = diff -p --stat
 	stat = diff --stat
