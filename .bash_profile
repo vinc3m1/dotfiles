@@ -46,11 +46,6 @@ export PATH=$PATH:$GOPATH/bin
 [[ -s "/usr/local/bin/virtualenvwrapper.sh" ]] && source /usr/local/bin/virtualenvwrapper.sh
 export WORKON_HOME=~/.virtualenvs
 
-# ruby
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
-export GEM_HOME=$HOME/.gem
-export PATH=$GEM_HOME/bin:$PATH
-
 # git
 [[ -s "$HOME/.git-completion.bash" ]] && source $HOME/.git-completion.bash
 
@@ -98,3 +93,11 @@ if [ -f "$HOME/google-cloud-sdk/completion.bash.inc" ]; then . "$HOME/google-clo
 
 # WSL2 Keychain
 if command -v keychain e &> /dev/null; then eval `keychain --eval --agents ssh id_ed25519`; fi
+
+# homebrew
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
+# ruby
+eval "$(rbenv init - bash)"
+export GEM_HOME=$HOME/.gem
+export PATH=$GEM_HOME/bin:$PATH
