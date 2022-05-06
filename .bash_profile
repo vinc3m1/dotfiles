@@ -3,6 +3,7 @@ export CLICOLOR=1
 export LSCOLORS=ExFxCxDxBxegedabagacad
 export HISTCONTROL=ignoreboth
 export EDITOR=vim
+stty -ixon
 
 # macOS
 export BASH_SILENCE_DEPRECATION_WARNING=1
@@ -45,6 +46,11 @@ export PATH=$PATH:$GOPATH/bin
 # python
 [[ -s "/usr/local/bin/virtualenvwrapper.sh" ]] && source /usr/local/bin/virtualenvwrapper.sh
 export WORKON_HOME=~/.virtualenvs
+
+# ruby (rbenv)
+if command -v rbenv &> /dev/null; then eval "$(rbenv init - bash)"; fi
+export GEM_HOME=$HOME/.gem
+export PATH=$GEM_HOME/bin:$PATH
 
 # git
 [[ -s "$HOME/.git-completion.bash" ]] && source $HOME/.git-completion.bash
@@ -92,12 +98,8 @@ if [ -f "$HOME/google-cloud-sdk/path.bash.inc" ]; then . "$HOME/google-cloud-sdk
 if [ -f "$HOME/google-cloud-sdk/completion.bash.inc" ]; then . "$HOME/google-cloud-sdk/completion.bash.inc"; fi
 
 # WSL2 Keychain
-if command -v keychain e &> /dev/null; then eval `keychain --eval --agents ssh id_ed25519`; fi
+if command -v keychain &> /dev/null; then eval `keychain --eval --agents ssh id_ed25519`; fi
 
 # homebrew
-eval "$(/opt/homebrew/bin/brew shellenv)"
+if [ -f "/opt/homebrew/bin/brew" ]; then eval "$(/opt/homebrew/bin/brew shellenv)"; fi
 
-# ruby
-eval "$(rbenv init - bash)"
-export GEM_HOME=$HOME/.gem
-export PATH=$GEM_HOME/bin:$PATH
