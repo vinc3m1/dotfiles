@@ -13,11 +13,12 @@ export ANDROID_HOME=$HOME/Library/Android/sdk
 export NDK_ROOT=$ANDROID_HOME/ndk-bundle
 export NDK_HOME=$NDK_ROOT
 export ANDROID_NDK=$NDK_ROOT
+export ANDROID_NDK_HOME=$ANDROID_HOME/ndk/21.4.7075529/
 export PATH=${PATH}:$ANDROID_HOME/tools
 export PATH=${PATH}:$ANDROID_HOME/tools/bin
 export PATH=${PATH}:$ANDROID_HOME/platform-tools
 export PATH=${PATH}:$ANDROID_HOME/cmdline-tools/latest/bin
-export PATH=${PATH}:$NDK_ROOT
+export PATH=${PATH}:$ANDROID_NDK_HOME
 export ANDROID_ABI=armeabi-v7a
 export JAVA8_HOME=`/usr/libexec/java_home -v 1.8`
 export JAVA11_HOME=`/usr/libexec/java_home -v 11`
@@ -44,8 +45,7 @@ export PATH=$PATH:/usr/local/go/bin
 export PATH=$PATH:$GOPATH/bin
 
 # python
-[[ -s "/usr/local/bin/virtualenvwrapper.sh" ]] && source /usr/local/bin/virtualenvwrapper.sh
-export WORKON_HOME=~/.virtualenvs
+export PATH=$PATH:$HOME/.local/bin
 
 # ruby (rbenv)
 if command -v rbenv &> /dev/null; then eval "$(rbenv init - bash)"; fi
@@ -103,3 +103,5 @@ if command -v keychain &> /dev/null; then eval `keychain --eval --agents ssh id_
 # homebrew
 if [ -f "/opt/homebrew/bin/brew" ]; then eval "$(/opt/homebrew/bin/brew shellenv)"; fi
 
+# rust
+. "$HOME/.cargo/env"
