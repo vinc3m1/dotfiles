@@ -8,6 +8,10 @@ stty -ixon
 # macOS
 export BASH_SILENCE_DEPRECATION_WARNING=1
 
+# local bin
+export PATH=${PATH}:$HOME/bin
+export PATH=${PATH}:$HOME/.local/bin
+
 # Android
 export ANDROID_HOME=$HOME/Library/Android/sdk
 export NDK_ROOT=$ANDROID_HOME/ndk-bundle
