@@ -26,7 +26,8 @@ export PATH=${PATH}:$ANDROID_NDK_HOME
 export ANDROID_ABI=armeabi-v7a
 export JAVA8_HOME=`/usr/libexec/java_home -v 1.8`
 export JAVA11_HOME=`/usr/libexec/java_home -v 11`
-export JAVA_HOME=$JAVA11_HOME
+export JAVA17_HOME=`/usr/libexec/java_home -v 17`
+export JAVA_HOME=$JAVA17_HOME
 export M2_HOME=/usr/local/opt/maven/libexec
 
 # Postgres
