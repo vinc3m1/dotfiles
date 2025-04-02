@@ -32,9 +32,6 @@
 	up = "!git remote update -p; git merge --ff-only @{u}"
 	genignore = "!gi() { curl -sL http://www.gitignore.io/api/$@ ;}; gi"
 
-[user]
-	name = Vince Mi
-	email = vinc3m1@gmail.com
 [color]
 	branch = auto
 	diff = auto
