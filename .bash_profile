@@ -85,16 +85,8 @@ if [ $ITERM_SESSION_ID ]; then
     export PROMPT_COMMAND='echo -ne "\033];${PWD##*/}\007"';
 fi
 
-# powerline-go
-function _update_ps1() {
-    PS1="$($GOPATH/bin/powerline-go -error $?)"
-    # git and hg disabled for performance
-    # PS1="$($GOPATH/bin/powerline-go -modules venv,user,host,ssh,cwd,perms,jobs,exit,root -error $?)"
-}
-
-if [ "$TERM" != "linux" ] && [ -f "$GOPATH/bin/powerline-go" ]; then
-    PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
-fi
+# oh my posh
+eval "$(oh-my-posh init bash --config 'https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/refs/heads/main/themes/easy-term.omp.json')"
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f "$HOME/google-cloud-sdk/path.bash.inc" ]; then . "$HOME/google-cloud-sdk/path.bash.inc"; fi
