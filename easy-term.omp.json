@@ -31,6 +31,14 @@
           "type": "os"
         },
         {
+          "background": "#ffc600",
+          "foreground": "#191f48",
+          "powerline_symbol": "\ue0b0",
+          "style": "diamond",
+          "template": "{{ if .SSHSession }} \uf023 {{ end }}",
+          "type": "session"
+        },
+        {
           "background": "#DA627D",
           "foreground": "#ffffff",
           "powerline_symbol": "\ue0b0",
