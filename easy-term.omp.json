@@ -112,6 +112,12 @@
           "template": "<#cc7eda> \u007C </><#7eb8da>\ue71e </> {{ .Full }}"
         },
         {
+          "type": "python",
+          "style": "powerline",
+          "foreground": "#81ff91",
+          "template": "<#cc7eda> \u007C </><#7eb8da>\ue235</> {{ if .Error }}{{ .Error }}{{ else }}{{ if .Venv }}{{ .Venv }} {{ end }}{{ .Full }}{{ end }}"
+        },
+        {
           "type": "sysinfo",
           "style": "powerline",
           "foreground": "#81ff91",
