@@ -11,6 +11,4 @@ New-Alias open ii
 Set-Alias ll Get-ChildItem
 function .. { Set-Location ..	 }
 
-Import-Module posh-git
-
 oh-my-posh init pwsh | Invoke-Expression
