@@ -39,19 +39,13 @@
           "type": "session"
         },
         {
-          "background": "#DA627D",
-          "foreground": "#ffffff",
-          "powerline_symbol": "\ue0b0",
-          "style": "diamond",
-          "template": " 🏠  ",
-          "type": "text"
-        },
-        {
           "background": "#8a62da",
           "foreground": "#ffffff",
           "powerline_symbol": "\ue0b0",
           "properties": {
-            "style": "folder"
+            "style": "fish",
+            "dir_length": 1,
+            "full_length_dirs": 5
           },
           "style": "powerline",
           "template": " {{ .Path }} ",
