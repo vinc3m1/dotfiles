@@ -85,9 +85,6 @@ if [ $ITERM_SESSION_ID ]; then
     export PROMPT_COMMAND='echo -ne "\033];${PWD##*/}\007"';
 fi
 
-# oh my posh
-eval "$(oh-my-posh init bash --config 'https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/refs/heads/main/themes/easy-term.omp.json')"
-
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f "$HOME/google-cloud-sdk/path.bash.inc" ]; then . "$HOME/google-cloud-sdk/path.bash.inc"; fi
 
@@ -99,6 +96,9 @@ if command -v keychain &> /dev/null; then eval `keychain --eval --agents ssh id_
 
 # homebrew
 if [ -f "/opt/homebrew/bin/brew" ]; then eval "$(/opt/homebrew/bin/brew shellenv)"; fi
+
+# oh my posh
+eval "$(oh-my-posh init bash --config '~/.easy-term.omp.json')"
 
 # rust
 . "$HOME/.cargo/env"
