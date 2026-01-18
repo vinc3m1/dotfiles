@@ -3,7 +3,10 @@ export CLICOLOR=1
 export LSCOLORS=ExFxCxDxBxegedabagacad
 export HISTCONTROL=ignoreboth
 export EDITOR=vim
-stty -ixon
+# Only run stty in interactive terminals
+if [ -t 0 ]; then
+    stty -ixon
+fi
 
 # macOS
 export BASH_SILENCE_DEPRECATION_WARNING=1
@@ -52,11 +55,6 @@ export PATH=$PATH:$GOPATH/bin
 # python
 export PATH=$PATH:$HOME/.local/bin
 
-# ruby (rbenv)
-if command -v rbenv &> /dev/null; then eval "$(rbenv init - bash)"; fi
-export GEM_HOME=$HOME/.gem
-export PATH=$GEM_HOME/bin:$PATH
-
 # git
 [[ -s "$HOME/.git-completion.bash" ]] && source $HOME/.git-completion.bash
 
@@ -85,20 +83,36 @@ if [ $ITERM_SESSION_ID ]; then
     export PROMPT_COMMAND='echo -ne "\033];${PWD##*/}\007"';
 fi
 
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f "$HOME/google-cloud-sdk/path.bash.inc" ]; then . "$HOME/google-cloud-sdk/path.bash.inc"; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f "$HOME/google-cloud-sdk/completion.bash.inc" ]; then . "$HOME/google-cloud-sdk/completion.bash.inc"; fi
-
 # WSL2 Keychain
 if command -v keychain &> /dev/null; then eval `keychain --eval --agents ssh id_ed25519`; fi
 
 # homebrew
 if [ -f "/opt/homebrew/bin/brew" ]; then eval "$(/opt/homebrew/bin/brew shellenv)"; fi
 
+# ruby (rbenv) (must be after homebrew)
+if command -v rbenv &> /dev/null; then eval "$(rbenv init - bash)"; fi
+export GEM_HOME=$HOME/.gem
+export PATH=$GEM_HOME/bin:$PATH
+
 # oh my posh
 eval "$(oh-my-posh init bash --config '~/.easy-term.omp.json')"
 
 # rust
 . "$HOME/.cargo/env"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
+. "$HOME/.langflow/uv/env"
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/vince/Downloads/google-cloud-sdk/path.bash.inc' ]; then . '/Users/vince/Downloads/google-cloud-sdk/path.bash.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/vince/Downloads/google-cloud-sdk/completion.bash.inc' ]; then . '/Users/vince/Downloads/google-cloud-sdk/completion.bash.inc'; fi
+
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/Users/vince/.lmstudio/bin"
+# End of LM Studio CLI section
+
