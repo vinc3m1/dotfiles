@@ -102,8 +102,6 @@ eval "$(oh-my-posh init bash --config '~/.easy-term.omp.json')"
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
-. "$HOME/.langflow/uv/env"
-
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/vince/Downloads/google-cloud-sdk/path.bash.inc' ]; then . '/Users/vince/Downloads/google-cloud-sdk/path.bash.inc'; fi
 
