@@ -17,8 +17,11 @@ case "$OSTYPE" in
         export LSCOLORS=ExFxCxDxBxegedabagacad
         export ANDROID_HOME=$HOME/Library/Android/sdk
         if [ -x /usr/libexec/java_home ]; then
-            export JAVA17_HOME=$(/usr/libexec/java_home -v 17 2>/dev/null)
+            export JAVA17_HOME=$(/usr/libexec/java_home -F -v 17 2>/dev/null)
+            export JAVA25_HOME=$(/usr/libexec/java_home -F -v 25 2>/dev/null)
+            # Prefer Java 25, with Java 17 as a fallback.
             [ -n "$JAVA17_HOME" ] && export JAVA_HOME=$JAVA17_HOME
+            [ -n "$JAVA25_HOME" ] && export JAVA_HOME=$JAVA25_HOME
         fi
         [ -d /usr/local/opt/maven/libexec ] && export M2_HOME=/usr/local/opt/maven/libexec
         [ -d /Applications/Postgres.app/Contents/Versions/9.3/bin ] && \
@@ -113,3 +116,9 @@ if [ -f '/Users/vince/Downloads/google-cloud-sdk/completion.bash.inc' ]; then . 
 
 # LM Studio CLI (lms)
 [ -d "$HOME/.lmstudio/bin" ] && export PATH="$PATH:$HOME/.lmstudio/bin"
+
+# Daytona completion
+[ -f "$HOME/.daytona.completion_script.bash" ] && . "$HOME/.daytona.completion_script.bash"
+
+# Raise the open-file soft limit when the system allows it.
+ulimit -Sn 65536 2>/dev/null || true
