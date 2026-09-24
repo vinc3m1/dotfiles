@@ -106,6 +106,9 @@ fi
 # rust
 [ -f "$HOME/.cargo/env" ] && . "$HOME/.cargo/env"
 
+# railway
+[ -f "$HOME/.railway/env" ] && . "$HOME/.railway/env"
+
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
