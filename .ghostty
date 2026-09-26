@@ -48,5 +48,8 @@
 # # Just for example:
 # resize-overlay-duration = 4s 200ms
 
+shell-integration-features = sudo,ssh-terminfo,ssh-env,no-cursor
 keybind = "global:ctrl+grave_accent=toggle_quick_terminal"
 quick-terminal-autohide = false
+quick-terminal-size = 60%
+cursor-style = block
