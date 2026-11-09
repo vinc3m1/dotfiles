@@ -125,3 +125,6 @@ if [ -f '/Users/vince/Downloads/google-cloud-sdk/completion.bash.inc' ]; then . 
 
 # Raise the open-file soft limit when the system allows it.
 ulimit -Sn 65536 2>/dev/null || true
+
+# mise
+eval "$(mise activate bash)"
