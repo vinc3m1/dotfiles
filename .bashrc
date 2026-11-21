@@ -1,3 +1,6 @@
+# mise shims for non-interactive shells (scripts, agents, ssh commands)
+[ -x "$HOME/.local/bin/mise" ] && eval "$("$HOME/.local/bin/mise" activate bash --shims)"
+
 # Skip if not interactive (safe-guard for scp, rsync, non-interactive ssh).
 case $- in *i*) ;; *) return ;; esac
 
