@@ -53,3 +53,4 @@ keybind = "global:ctrl+grave_accent=toggle_quick_terminal"
 quick-terminal-autohide = false
 quick-terminal-size = 60%
 cursor-style = block
+keybind = super+enter=unbind

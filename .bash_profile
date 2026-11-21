@@ -2,3 +2,7 @@
 # Real config lives in ~/.bashrc so zellij and Linux terminals (which start
 # non-login shells) get the same setup.
 [[ -f ~/.bashrc ]] && . ~/.bashrc
+
+# >>> railway initialize >>>
+source "$HOME/.railway/env"
+# <<< railway initialize <<<
